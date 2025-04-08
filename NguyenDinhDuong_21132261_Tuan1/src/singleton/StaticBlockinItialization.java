@@ -6,8 +6,6 @@ public class StaticBlockinItialization {
     private StaticBlockinItialization() {
         System.out.println("StaticBlockInitialization Instance Created!");
     }
-
-    // Static block để khởi tạo instance
     static {
         try {
             instance = new StaticBlockinItialization();
@@ -15,11 +13,9 @@ public class StaticBlockinItialization {
             throw new RuntimeException("Exception occurred in creating singleton instance");
         }
     }
-
     public static StaticBlockinItialization getInstance() {
         return instance;
     }
-
     public void showMessage() {
         System.out.println("Hello from Static Block Initialization Singleton!");
     }
